@@ -49,6 +49,42 @@ body {
   padding: 32px 0;
 }
 
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.brand-mark {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-link {
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
+  border-color: rgba(98, 197, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -250,6 +286,104 @@ body {
   line-height: 1.6;
 }
 
+.academic-hero-copy {
+  max-width: 760px;
+}
+
+.academic-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.academic-hero-content {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.info-grid,
+.capstone-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.info-panel,
+.credential-card,
+.capstone-card,
+.academic-project-card {
+  padding: 22px 24px;
+}
+
+.info-panel h4,
+.credential-card h4,
+.capstone-card h4,
+.academic-project-copy h4 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.info-panel p,
+.credential-card p,
+.capstone-card p,
+.academic-project-copy p {
+  margin: 0 0 12px;
+  color: rgba(241, 245, 249, 0.75);
+  line-height: 1.6;
+}
+
+.philosophy-panel {
+  margin-top: 20px;
+}
+
+.credential-card {
+  max-width: 540px;
+}
+
+.academic-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.academic-project-card {
+  display: grid;
+  gap: 18px;
+}
+
+.project-placeholder {
+  min-height: 180px;
+  border-radius: 18px;
+  border: 1px dashed rgba(98, 197, 255, 0.28);
+  background:
+    linear-gradient(135deg, rgba(98, 197, 255, 0.08), rgba(124, 240, 200, 0.06)),
+    rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-placeholder span {
+  color: rgba(241, 245, 249, 0.7);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.academic-project-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.project-link {
+  margin-top: 4px;
+}
+
 .footer {
   margin-top: 8px;
   text-align: center;
@@ -275,6 +409,41 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 840px) {
+  .hero,
+  .project-card,
+  .info-grid,
+  .academic-project-grid,
+  .capstone-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100%, calc(100% - 32px));
+    padding: 20px 0 28px;
+  }
+
+  .top-nav,
+  .project-card,
+  .info-panel,
+  .credential-card,
+  .capstone-card,
+  .academic-project-card {
+    padding: 18px;
+  }
+
+  .project-preview-image {
+    max-width: 100%;
   }
 }
 
