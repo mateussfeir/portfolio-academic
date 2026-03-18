@@ -7,6 +7,8 @@ const academicProjects = [
       "Full-stack financial data platform built with Django and REST APIs. Integrates real-time stock and crypto data, calculates portfolio value, and visualizes asset allocation through interactive charts.",
     stack: ["Django", "Python", "REST APIs", "PostgreSQL"],
     githubHref: "https://github.com/mateussfeir/Portfolio_tracker",
+    imageSrc: `${import.meta.env.BASE_URL}bitbalance-preview.jpeg`,
+    imageAlt: "BitBalance dashboard preview",
   },
   {
     title: "Capstone Project",
@@ -73,11 +75,15 @@ const capstoneSections = [
   },
 ];
 
-const ProjectCard = ({ title, description, stack, githubHref }) => (
+const ProjectCard = ({ title, description, stack, githubHref, imageSrc, imageAlt }) => (
   <article className="card academic-project-card">
-    <div className="project-placeholder" aria-hidden="true">
-      <span>{title}</span>
-    </div>
+    {imageSrc ? (
+      <img src={imageSrc} alt={imageAlt} className="academic-project-image" />
+    ) : (
+      <div className="project-placeholder" aria-hidden="true">
+        <span>{title}</span>
+      </div>
+    )}
     <div className="academic-project-copy">
       <h4>{title}</h4>
       <p>{description}</p>

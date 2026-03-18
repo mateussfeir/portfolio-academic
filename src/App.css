@@ -355,6 +355,14 @@ body {
   gap: 18px;
 }
 
+.academic-project-image {
+  width: 100%;
+  min-height: 180px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
 .project-placeholder {
   min-height: 180px;
   border-radius: 18px;
