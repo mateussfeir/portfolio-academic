@@ -1,4 +1,5 @@
 import { Button, Pill, Section } from "../components/PortfolioUI";
+import bitbalanceImg from "../assets/bitbalance-preview.jpeg";
 
 const academicProjects = [
   {
@@ -7,8 +8,8 @@ const academicProjects = [
       "Full-stack financial data platform built with Django and REST APIs. Integrates real-time stock and crypto data, calculates portfolio value, and visualizes asset allocation through interactive charts.",
     stack: ["Django", "Python", "REST APIs", "PostgreSQL"],
     githubHref: "https://github.com/mateussfeir/Portfolio_tracker",
-    imageSrc: `${import.meta.env.BASE_URL}bitbalance-preview.jpeg`,
-    imageAlt: "BitBalance dashboard preview",
+    imageSrc: bitbalanceImg,
+    imageAlt: "BitBalance screenshot",
   },
   {
     title: "Capstone Project",

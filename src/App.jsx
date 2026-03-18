@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Academic from "./pages/Academic";
 import { Button, NavBar, Pill, Section } from "./components/PortfolioUI";
+import bitbalanceImg from "./assets/bitbalance-preview.jpeg";
 
 const ProjectCard = ({ title, description, href, linkText }) => (
   <a
@@ -16,8 +17,8 @@ const ProjectCard = ({ title, description, href, linkText }) => (
       <span className="link">{linkText}</span>
     </div>
     <img
-      src={`${import.meta.env.BASE_URL}bitbalance-preview.jpeg`}
-      alt="BitBalance dashboard preview"
+      src={bitbalanceImg}
+      alt="BitBalance screenshot"
       className="project-preview-image"
     />
   </a>
